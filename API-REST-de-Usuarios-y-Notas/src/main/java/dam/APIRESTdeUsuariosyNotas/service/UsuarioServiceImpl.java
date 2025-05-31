@@ -17,4 +17,5 @@ public class UsuarioServiceImpl extends AbstractCrudService<Usuario, Long, Usuar
     public boolean existsByEmail(String email) {
         return repository.existsByEmail(email);
     }
+    
 }
