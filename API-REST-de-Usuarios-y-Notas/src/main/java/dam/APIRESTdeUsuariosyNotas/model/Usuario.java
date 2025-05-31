@@ -3,6 +3,10 @@ package dam.APIRESTdeUsuariosyNotas.model;
 import jakarta.persistence.*;
 import java.util.*;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
 @Entity
 @Table(name = "usuarios", uniqueConstraints = {
     @UniqueConstraint(columnNames = "email")
