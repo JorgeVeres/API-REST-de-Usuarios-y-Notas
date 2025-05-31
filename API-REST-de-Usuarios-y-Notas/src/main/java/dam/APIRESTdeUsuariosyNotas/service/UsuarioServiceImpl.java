@@ -1,5 +1,6 @@
 package dam.APIRESTdeUsuariosyNotas.service;
 
+import dam.APIRESTdeUsuariosyNotas.model.Usuario;
 import dam.APIRESTdeUsuariosyNotas.repository.UsuarioRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
