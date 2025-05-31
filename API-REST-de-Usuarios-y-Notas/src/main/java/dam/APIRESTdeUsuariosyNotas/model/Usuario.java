@@ -16,19 +16,20 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
     @NotBlank(message = "El nombre es obligatorio")
     @Size(max = 100, message = "Máximo 100 caracteres")
     private String nombre;
-    
+
     @NotBlank(message = "El email es obligatorio")
     @Email(message = "Formato de email inválido")
-    @Column(unique = true)
+    @Column(name = "email", unique = true)  // Mapeo explícito
     private String email;
-    
+
     @NotBlank(message = "La contraseña es obligatoria")
+    @Column(name = "password_hash")  // Mapeo a columna snake_case
     private String passwordHash;
-    
+
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Nota> notas = new ArrayList<>();
 

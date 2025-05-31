@@ -36,3 +36,13 @@ API REST desarrollada con Spring Boot para gestionar usuarios y sus notas. Imple
 
 # Pruebas
 
+    1. Registrar nuevo usuario (v2)
+
+        -Método: POST
+        -URL: http://localhost:8080/api/v2/sign-in
+        -Body (raw - JSON):
+            {
+                "nombre": "María López",
+                "email": "maria@example.com",
+                "password": "Pass1234!"
+            }
